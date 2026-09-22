@@ -2,98 +2,77 @@
 
 ## Introduction
 
-GymVision is a workout app that helps users track their progress and improve their training using their phone camera. The app focuses on basic exercises and uses computer vision to count reps and analyze movement quality.
+GymVision is a mobile workout tracker powered by computer vision. Instead of manually logging reps and sets, users position their phone camera during an exercise; the app detects the movement, counts completed repetitions in real time, and evaluates exercise form.
 
 ---
 
-## Why the project is important
+## The Problem
 
-Many people struggle to stay consistent with workouts because tracking is manual and difficult. GymVision makes it easier to monitor progress, stay motivated, and improve form over time.
-
-It helps users:
-
-- track workout performance
-- see progress with statistics
-- improve exercise
-- follow short plans
-- build better training habits
+Tracking workouts manually creates friction, leading most people to abandon logging altogether. Additionally, working out without a trainer makes it difficult to maintain proper form, verify full range of motion, and prevent injury. GymVision automates tracking and movement feedback using standard phone hardware, removing the friction from workout logging.
 
 ---
 
-## Application idea
+## Core Concept
 
-The app lets users record exercises with their phone camera or simpel camera. The system detects movements, counts repetitions, and gives feedback on performance. The main business logic is computer vision: detect the exercise, count reps, and provide tips for better form.
-
----
-
-## Main features
-
-### Version 1: MVP
-
-- workout app with basic exercises
-- rep counting using camera input
-- basic workout tracking and progress logs
-- simple dashboard for workouts and stats
-
-### Version 2: Analytics
-
-- detailed exercise statistics
-- weekly and monthly progress tracking
-- performance trends and consistency reports
-- better insight into training results
-
-### Version 3: Form correction
-
-- AI-based form analysis
-- posture and movement feedback
-- form correction suggestions
-- coaching notes and exercise tips
-
-### Version 4: Personalization and UX
-
-- personalized workout recommendations
-- user profiles and goals
-- better UI/UX
-- motivation features and advanced dashboards
+The user positions their phone to capture the exercise. A computer vision pipeline performs real-time pose estimation, tracking joint angles and movement phases (eccentric/concentric) to validate reps and flag mechanical breakdown. All logged data syncs directly to the user's profile and history.
 
 ---
 
-## Tech and stack
+## Development Roadmap
 
-### Mobile
+### Phase 1: MVP
 
-- Flutter or React Native
-- camera access for recording workouts
-- clean and simple user interface
+* Support for 2–3 core compound/bodyweight movements (e.g., Squat, Push-up)
+* Real-time rep counting via pose estimation and movement phase detection
+* Workout session logging (exercise, sets, reps, timestamps)
+* Basic dashboard displaying recent workouts and session summaries
+
+### Phase 2: Performance & Analytics
+
+* Movement tempo and time-under-tension tracking
+* Weekly/monthly volume and consistency metrics
+* Expanded exercise library (additional bodyweight and free-weight movements)
+* Performance trend graphs and milestone tracking
+
+### Phase 3: Real-Time Form Analysis
+
+* Joint angle verification against defined kinematic thresholds (Range of Motion)
+* Live visual/audio cues for common faults (e.g., knee valgus, spinal flexion)
+* Per-set movement quality score
+* Actionable post-set technique breakdowns
+
+### Phase 4: Personalization
+
+* Dynamic volume/intensity suggestions based on logged performance
+* Custom goal setting and progressive overload tracking
+* Video replay clips highlighting technique breakdowns across past sessions
+
+---
+
+## Tech Stack
+
+### Mobile Client
+
+* Flutter or React Native
+* Real-time camera feed integration and skeleton overlay rendering
+
+### Computer Vision & Processing
+
+* MediaPipe or OpenCV for pose estimation
+* TensorFlow Lite / ONNX Runtime for on-device inference
 
 ### Backend
 
-- Node.js or Python
-- FastAPI or Express
-- user authentication and APIs
+* Python (FastAPI) or Node.js
+* REST API architecture for user management, sync, and processing offload
 
-### Computer vision
+### Database & Storage
 
-- OpenCV
-- MediaPipe
-- TensorFlow or PyTorch
+* PostgreSQL or Supabase for relational user and workout data
+* S3-compatible cloud storage for processed video clips and keyframe logs
 
-### Database
+### Infrastructure & Tooling
 
-- PostgreSQL
-- Firebase or Supabase
-- cloud storage for videos and logs
-
-### Tools
-
-- GitHub
-- Docker
-- CI/CD
-- cloud hosting
-
----
-
-## Summary
-
-GymVision is a smart workout app that helps users track their training, count reps, and improve their form with computer vision. The first version focuses on recording exercises through the phone camera and giving basic performance feedback. Later versions can expand into full analytics, form correction, and personalized training guidance.
-
+* Docker containerization
+* GitHub Actions (CI/CD)
+* Cloud hosting platform
