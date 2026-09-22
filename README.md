@@ -14,15 +14,15 @@ It helps users:
 
 - track workout performance
 - see progress with statistics
-- improve exercise form
-- follow short structured plans
+- improve exercise
+- follow short plans
 - build better training habits
 
 ---
 
 ## Application idea
 
-The app lets users record exercises with their phone camera. The system detects movements, counts repetitions, and gives feedback on performance. The main business logic is computer vision: detect the exercise, count reps, and provide tips for better form.
+The app lets users record exercises with their phone camera or simpel camera. The system detects movements, counts repetitions, and gives feedback on performance. The main business logic is computer vision: detect the exercise, count reps, and provide tips for better form.
 
 ---
 
@@ -31,7 +31,6 @@ The app lets users record exercises with their phone camera. The system detects 
 ### Version 1: MVP
 
 - workout app with basic exercises
-- 2 full 20-minute workout plans
 - rep counting using camera input
 - basic workout tracking and progress logs
 - simple dashboard for workouts and stats
