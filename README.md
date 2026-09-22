@@ -51,9 +51,9 @@ The user positions their phone to capture the exercise. A computer vision pipeli
 
 ## Tech Stack
 
-### Mobile Client
+### Fronetend - Mobile Client
 
-* Flutter or React Native
+* React Native Or react web app with capacitorJS
 * Real-time camera feed integration and skeleton overlay rendering
 
 ### Computer Vision & Processing
@@ -61,18 +61,16 @@ The user positions their phone to capture the exercise. A computer vision pipeli
 * MediaPipe or OpenCV for pose estimation
 * TensorFlow Lite / ONNX Runtime for on-device inference
 
-### Backend
+### Backend - API
 
-* Python (FastAPI) or Node.js
+* Node.js Express
 * REST API architecture for user management, sync, and processing offload
 
 ### Database & Storage
 
-* PostgreSQL or Supabase for relational user and workout data
-* S3-compatible cloud storage for processed video clips and keyframe logs
+* mongodb for user and workout data
 
 ### Infrastructure & Tooling
 
 * Docker containerization
 * GitHub Actions (CI/CD)
-* Cloud hosting platform
