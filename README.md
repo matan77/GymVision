@@ -2,7 +2,7 @@
 
 ## Introduction
 
-GymVision is a workout tracking app that incorporates computer vision technology. While it functions as a standard workout tracker, it offers advanced computer vision features—such as using the phones camera to log reps and sets instead of manual entry. users point their camera at themselves during the exercise, and the app identifies the movement, counts the sets, and assesses whether the technique is correct.
+GymVision is a workout tracking app that incorporates computer vision technology. While it functions as a standard workout tracker, it offers advanced computer vision features-such as using the phones camera to log reps and sets instead of manual entry. users point their camera at themselves during the exercise, and the app identifies the movement, counts the sets, and assesses whether the technique is correct.
 
 ---
 
