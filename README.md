@@ -73,4 +73,3 @@ The user positions their phone to capture the exercise. A computer vision pipeli
 ### Infrastructure & Tooling
 
 * Docker containerization
-* GitHub Actions (CI/CD)
